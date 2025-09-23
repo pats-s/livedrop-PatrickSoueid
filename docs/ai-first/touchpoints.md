@@ -4,7 +4,7 @@
 ## Support Chatbot Assistant
 
 ### Problem statement
-ShopLite currently handles around 3,000 support tickets daily, with average response times of 1-2 hours during business hours and 12+ hours on weekends. And Most queries are repetitive like order status, return policies, shipping questions with the suport chatbot, this could be instantly resolved. waiting all this time for a question creates customer frustration, and also it prevents human agents from focusing on complex issues requiring empathy and problem-solving skills.
+ShopLite currently handles around 3,000 support tickets daily, with average response times of 1-2 hours during business hours and 12+ hours on weekends. And Most queries are repetitive like order status, return policies, shipping questions with the suport chatbot, this could be instantly resolved. waiting all this time for a question creates customer frustration, and also it prevents human agents from focusing on complex issues requiring problem-solving skills.
 
 ### Happy path
 1. User clicks "Chat Support" button on any page
@@ -21,11 +21,11 @@ ShopLite currently handles around 3,000 support tickets daily, with average resp
 ### Grounding & guardrails
 - **Source of truth**: policies files, order-status API, product catalog database
 - **Retrieval scope**: Only official ShopLite policies, order data for authenticated users, general product info
-- **Max context**: 300 tokens per conversation turn to stay within latency budget
+- **Max context**: 300 tokens per conversation in order to stay within latency budget
 - **Refuse outside scope**: when the user starts asking about product recommendations, price negotiations
 
 ### Human-in-the-loop
-- **Escalation triggers**: escalaton to human support will be trigered when a user explicitly requests human, bot confidence <70%, payment/refund disputes.
+- **Escalation triggers**: escalaton to human support will be trigered when a user explicitly requests human assistance, bot confidence below 70%, payment/refund disputes.
 - **UI surface**: "Speak with human agent" button will always be visible.
 - **Reviewer and SLA**: Agents will be available during business hours, 30-second pickup target and overnight escalations queued for morning
 
@@ -63,7 +63,7 @@ Most Shoplite search features has a 40% abandonment rate, with users leaving aft
 ### Happy path
 1. User clicks in search box on homepage or nav bar
 2. User types "wire" and then the system immediately suggests relevant completions
-3. After 3 characters, AI will generate contextual suggestions: wireless headphones, wireless chargers
+3. After 3 characters, AI will generate contextual suggestions: wireless headphones, wireless chargers,...
 4. Suggestions will update in real-time as user continues typing "wireless"
 5. The system will show 5 smart suggestions based on popularity, inventory, and user behavior
 6. User clicks "wireless headphones" suggestion
