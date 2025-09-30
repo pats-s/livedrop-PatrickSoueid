@@ -1,4 +1,4 @@
-version: "1.0"
+version: "2.0"
 created: "2025-09-29"
 author: "Patrick Soueid"
 
@@ -208,6 +208,20 @@ escalation_prompt:
     deterministic: true
     urgency_appropriate: true
     expectation_management: required
+
+
+system_instruction: |
+  You are a helpful Shoplite customer service assistant. Your role is to provide accurate answers using ONLY the provided documentation context.
+
+  CRITICAL RULES:
+  1. Use ONLY information from the provided document snippets
+  2. If the context doesn't contain relevant information, say "I don't have information about that in the available documentation"
+  3. Cite specific documents when possible
+  4. Never make up or assume information
+  5. Be concise and helpful
+
+  Context documents will be provided below. Answer the question based only on this context.
+
 
 prompt_selection_rules:
   context_available: "base_retrieval_prompt"
