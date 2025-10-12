@@ -1,0 +1,227 @@
+[
+  {
+    "id": "PROD001",
+    "title": "Wireless Bluetooth Headphones",
+    "price": 79.99,
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400",
+    "tags": ["electronics", "audio", "wireless"],
+    "stockQty": 45,
+    "description": "Premium wireless headphones with active noise cancellation and 30-hour battery life."
+  },
+  {
+    "id": "PROD002",
+    "title": "Organic Cotton T-Shirt",
+    "price": 24.99,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+    "tags": ["clothing", "organic", "basics"],
+    "stockQty": 120,
+    "description": "Sustainable organic cotton t-shirt available in multiple colors."
+  },
+  {
+    "id": "PROD003",
+    "title": "Stainless Steel Water Bottle",
+    "price": 32.50,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400",
+    "tags": ["accessories", "sustainable", "sports"],
+    "stockQty": 88,
+    "description": "Insulated water bottle keeps drinks cold for 24 hours, hot for 12 hours."
+  },
+  {
+    "id": "PROD004",
+    "title": "Mechanical Keyboard RGB",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400",
+    "tags": ["electronics", "gaming", "accessories"],
+    "stockQty": 34,
+    "description": "Gaming mechanical keyboard with Cherry MX switches and customizable RGB lighting."
+  },
+  {
+    "id": "PROD005",
+    "title": "Yoga Mat Premium",
+    "price": 48.00,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400",
+    "tags": ["sports", "fitness", "wellness"],
+    "stockQty": 67,
+    "description": "Extra thick yoga mat with superior grip and eco-friendly materials."
+  },
+  {
+    "id": "PROD006",
+    "title": "Smart Watch Fitness Tracker",
+    "price": 199.99,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+    "tags": ["electronics", "fitness", "wearable"],
+    "stockQty": 23,
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, and sleep tracking."
+  },
+  {
+    "id": "PROD007",
+    "title": "Leather Laptop Bag",
+    "price": 89.99,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",
+    "tags": ["accessories", "professional", "leather"],
+    "stockQty": 41,
+    "description": "Premium leather laptop bag with padded compartment for 15-inch laptops."
+  },
+  {
+    "id": "PROD008",
+    "title": "Ceramic Coffee Mug Set",
+    "price": 36.99,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400",
+    "tags": ["home", "kitchen", "ceramics"],
+    "stockQty": 95,
+    "description": "Set of 4 handcrafted ceramic coffee mugs with unique glazed finish."
+  },
+  {
+    "id": "PROD009",
+    "title": "Running Shoes Performance",
+    "price": 124.99,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+    "tags": ["sports", "footwear", "running"],
+    "stockQty": 58,
+    "description": "Lightweight running shoes with responsive cushioning and breathable mesh upper."
+  },
+  {
+    "id": "PROD010",
+    "title": "Portable Phone Charger",
+    "price": 39.99,
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400",
+    "tags": ["electronics", "accessories", "mobile"],
+    "stockQty": 142,
+    "description": "20,000mAh portable charger with fast charging and dual USB ports."
+  },
+  {
+    "id": "PROD011",
+    "title": "Bamboo Cutting Board",
+    "price": 28.50,
+    "image": "https://images.unsplash.com/photo-1587302108992-20648821725d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400",
+    "tags": ["home", "kitchen", "sustainable"],
+    "stockQty": 76,
+    "description": "Durable bamboo cutting board with juice groove and non-slip feet."
+  },
+  {
+    "id": "PROD012",
+    "title": "Denim Jacket Classic",
+    "price": 68.00,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+    "tags": ["clothing", "denim", "outerwear"],
+    "stockQty": 52,
+    "description": "Timeless denim jacket with classic fit and premium quality fabric."
+  },
+  {
+    "id": "PROD013",
+    "title": "Indoor Plant Monstera",
+    "price": 45.00,
+    "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=400",
+    "tags": ["home", "plants", "decor"],
+    "stockQty": 31,
+    "description": "Live Monstera deliciosa plant in decorative ceramic pot, perfect for home offices."
+  },
+  {
+    "id": "PROD014",
+    "title": "Wireless Gaming Mouse",
+    "price": 69.99,
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400",
+    "tags": ["electronics", "gaming", "accessories"],
+    "stockQty": 63,
+    "description": "Precision wireless gaming mouse with 16,000 DPI sensor and programmable buttons."
+  },
+  {
+    "id": "PROD015",
+    "title": "Aromatherapy Diffuser",
+    "price": 42.99,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400",
+    "tags": ["home", "wellness", "aromatherapy"],
+    "stockQty": 89,
+    "description": "Ultrasonic essential oil diffuser with LED mood lighting and timer settings."
+  },
+  {
+    "id": "PROD016",
+    "title": "Sunglasses Polarized",
+    "price": 54.99,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+    "tags": ["accessories", "sunglasses", "fashion"],
+    "stockQty": 104,
+    "description": "UV400 polarized sunglasses with lightweight frames and scratch-resistant lenses."
+  },
+  {
+    "id": "PROD017",
+    "title": "Backpack Travel 40L",
+    "price": 95.00,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",
+    "tags": ["accessories", "travel", "outdoor"],
+    "stockQty": 38,
+    "description": "Durable travel backpack with multiple compartments and laptop sleeve."
+  },
+  {
+    "id": "PROD018",
+    "title": "Cooking Pan Set",
+    "price": 159.99,
+    "image": "https://plus.unsplash.com/premium_photo-1664391955813-68ff6e17ce42?q=80&w=1017&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400",
+    "tags": ["home", "kitchen", "cookware"],
+    "stockQty": 27,
+    "description": "5-piece non-stick cooking pan set with stainless steel handles."
+  },
+  {
+    "id": "PROD019",
+    "title": "Bluetooth Speaker Waterproof",
+    "price": 64.99,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
+    "tags": ["electronics", "audio", "outdoor"],
+    "stockQty": 71,
+    "description": "Portable waterproof Bluetooth speaker with 12-hour battery life and deep bass."
+  },
+  {
+    "id": "PROD020",
+    "title": "Memory Foam Pillow",
+    "price": 49.99,
+    "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400",
+    "tags": ["home", "bedding", "wellness"],
+    "stockQty": 113,
+    "description": "Ergonomic memory foam pillow with cooling gel layer and breathable cover."
+  },
+  {
+    "id": "PROD021",
+    "title": "Digital Art Tablet",
+    "price": 249.99,
+    "image": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400",
+    "tags": ["electronics", "creative", "professional"],
+    "stockQty": 19,
+    "description": "Graphics tablet with pressure-sensitive stylus for digital artists and designers."
+  },
+  {
+    "id": "PROD022",
+    "title": "Resistance Bands Set",
+    "price": 29.99,
+    "image": "https://images.unsplash.com/photo-1584827386916-b5351d3ba34b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400",
+    "tags": ["sports", "fitness", "home-gym"],
+    "stockQty": 156,
+    "description": "Set of 5 resistance bands with different strength levels and carrying bag."
+  },
+  {
+    "id": "PROD023",
+    "title": "Espresso Machine",
+    "price": 399.99,
+    "image": "https://images.unsplash.com/photo-1616035596458-2338800a1ff2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400",
+    "tags": ["home", "kitchen", "coffee"],
+    "stockQty": 14,
+    "description": "Professional-grade espresso machine with milk frother and programmable settings."
+  },
+  {
+    "id": "PROD024",
+    "title": "Canvas Sneakers",
+    "price": 59.99,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400",
+    "tags": ["footwear", "casual", "sustainable"],
+    "stockQty": 92,
+    "description": "Classic canvas sneakers made with recycled materials and comfortable insoles."
+  },
+  {
+    "id": "PROD025",
+    "title": "LED Desk Lamp",
+    "price": 44.99,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400",
+    "tags": ["home", "lighting", "office"],
+    "stockQty": 68,
+    "description": "Adjustable LED desk lamp with touch controls and multiple brightness levels."
+  }
+]

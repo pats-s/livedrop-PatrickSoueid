@@ -1,0 +1,122 @@
+[
+  {
+    "qid": "Q01",
+    "category": "Account",
+    "question": "How do I create a seller account on Shoplite?",
+    "answer": "To create a seller account, visit the Shoplite seller registration page, provide business information including tax ID, and complete the verification process which takes 2-3 business days."
+  },
+  {
+    "qid": "Q02",
+    "category": "Returns",
+    "question": "What is Shoplite's return policy?",
+    "answer": "Shoplite offers a 30-day return window for most items. Items must be unused and in original packaging. Return authorization is required before sending items back."
+  },
+  {
+    "qid": "Q03",
+    "category": "Shipping",
+    "question": "How do I track my order?",
+    "answer": "You can track your order by logging into your account and visiting the Orders section. Once your order ships, you'll receive a tracking number via email that can be used on the carrier's website."
+  },
+  {
+    "qid": "Q04",
+    "category": "Payment",
+    "question": "What payment methods does Shoplite accept?",
+    "answer": "Shoplite accepts all major credit cards (Visa, Mastercard, American Express), debit cards, PayPal, and Apple Pay. Payment is securely processed with 256-bit encryption."
+  },
+  {
+    "qid": "Q05",
+    "category": "Shipping",
+    "question": "How long does shipping take?",
+    "answer": "Standard shipping takes 5-7 business days. Express shipping (2-3 business days) and overnight shipping options are available at checkout for an additional fee."
+  },
+  {
+    "qid": "Q06",
+    "category": "Account",
+    "question": "How do I reset my password?",
+    "answer": "Click 'Forgot Password' on the login page, enter your registered email address, and you'll receive a password reset link within 5 minutes. The link expires after 24 hours."
+  },
+  {
+    "qid": "Q07",
+    "category": "Cart",
+    "question": "How long do items stay in my cart?",
+    "answer": "Items remain in your cart for 30 days for logged-in users. Guest cart items are saved for 7 days. However, items are not reserved and may sell out."
+  },
+  {
+    "qid": "Q08",
+    "category": "Promotions",
+    "question": "How do I use a promotional code?",
+    "answer": "Enter your promotional code in the 'Promo Code' field during checkout before completing payment. The discount will be applied to eligible items automatically. Only one promo code can be used per order."
+  },
+  {
+    "qid": "Q09",
+    "category": "Returns",
+    "question": "How do I initiate a return?",
+    "answer": "Log into your account, go to Order History, select the order, and click 'Request Return'. Choose the items and reason for return. You'll receive a prepaid return label via email within 24 hours."
+  },
+  {
+    "qid": "Q10",
+    "category": "Fees",
+    "question": "What are the seller fees on Shoplite?",
+    "answer": "Shoplite charges a 12% commission on each sale plus a $0.30 transaction fee. Premium seller accounts ($29/month) reduce commission to 8%. Payment processing fees are separate."
+  },
+  {
+    "qid": "Q11",
+    "category": "Product",
+    "question": "How do I leave a product review?",
+    "answer": "You can leave a review for purchased items by going to Order History, selecting the order, and clicking 'Write Review'. Reviews must be submitted within 90 days of delivery."
+  },
+  {
+    "qid": "Q12",
+    "category": "Shipping",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, Shoplite ships to over 50 countries. International shipping costs and delivery times vary by destination. Customs fees and import duties are the buyer's responsibility."
+  },
+  {
+    "qid": "Q13",
+    "category": "Account",
+    "question": "Can I change my shipping address after placing an order?",
+    "answer": "Shipping addresses can only be changed within 2 hours of order placement if the order hasn't been processed yet. Contact customer support immediately with your order number."
+  },
+  {
+    "qid": "Q14",
+    "category": "Product",
+    "question": "What does 'low stock' mean?",
+    "answer": "Low stock indicates that fewer than 5 units remain available. Items may sell out before you complete checkout. We recommend purchasing immediately if you want the item."
+  },
+  {
+    "qid": "Q15",
+    "category": "Payment",
+    "question": "When will I be charged for my order?",
+    "answer": "Your payment method is charged immediately when you place the order. For pre-orders, you'll be charged when the item ships. If an item is backordered, we'll notify you before charging."
+  },
+  {
+    "qid": "Q16",
+    "category": "Returns",
+    "question": "How long do refunds take to process?",
+    "answer": "Refunds are processed within 5-7 business days after we receive your return. The refund will be issued to your original payment method. Bank processing may take an additional 3-5 business days."
+  },
+  {
+    "qid": "Q17",
+    "category": "Seller",
+    "question": "How do I manage my inventory as a seller?",
+    "answer": "Sellers can manage inventory through the Seller Dashboard. Navigate to Inventory Management to update stock quantities, product details, and pricing. Changes are reflected on the storefront within 15 minutes."
+  },
+  {
+    "qid": "Q18",
+    "category": "Security",
+    "question": "Is my payment information secure?",
+    "answer": "Yes, all payment information is encrypted using 256-bit SSL technology. Shoplite is PCI DSS compliant and does not store your full credit card number. We use tokenization for all transactions."
+  },
+  {
+    "qid": "Q19",
+    "category": "Cart",
+    "question": "Can I save items for later?",
+    "answer": "Yes, click the 'Save for Later' button on any cart item to move it to your Saved Items list. You can access saved items from your cart at any time and move them back when ready to purchase."
+  },
+  {
+    "qid": "Q20",
+    "category": "Support",
+    "question": "How do I contact customer support?",
+    "answer": "Customer support is available 24/7 via live chat, email at support@shoplite.com, or phone at 1-800-SHOPLITE. Average response time is under 2 hours for email and immediate for chat during business hours."
+  }
+]
