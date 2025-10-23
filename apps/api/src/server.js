@@ -30,7 +30,7 @@ const PUBLIC_URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: (origin, cb) => cb(null, true), // allow everything dynamically
   credentials: true
 }));
 app.use(express.json());
