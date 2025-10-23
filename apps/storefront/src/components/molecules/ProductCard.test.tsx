@@ -5,13 +5,16 @@ import ProductCard from './ProductCard';
 import type { Product } from '../../lib/api';
 
 const mockProduct: Product = {
-  id: 'PROD001',
-  title: 'Test Product',
+  _id: 'PROD001',
+  name: 'Test Product',
   price: 99.99,
-  image: 'https://example.com/image.jpg',
+  imageUrl: 'https://example.com/image.jpg',
   tags: ['electronics', 'test'],
-  stockQty: 10,
+  stock: 10,
   description: 'Test description',
+  category: 'Gadgets',
+  rating: 4.2,
+  reviewCount: 34,
 };
 
 const renderWithRouter = (component: React.ReactElement) => {
@@ -32,7 +35,7 @@ describe('ProductCard', () => {
   it('renders product image', () => {
     renderWithRouter(<ProductCard product={mockProduct} onAddToCart={vi.fn()} />);
     const image = screen.getByAltText('Test Product');
-    expect(image).toHaveAttribute('src', mockProduct.image);
+    expect(image).toHaveAttribute('src', mockProduct.imageUrl);
   });
 
   it('renders product tags', () => {
