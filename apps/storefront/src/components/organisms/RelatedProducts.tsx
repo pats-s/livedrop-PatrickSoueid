@@ -1,5 +1,5 @@
 import { ProductCard } from '../molecules';
-import { useCartStore } from '../../lib/store';
+import { useStore } from '../../lib/store';
 import type { Product } from '../../lib/api';
 
 interface RelatedProductsProps {
@@ -8,7 +8,7 @@ interface RelatedProductsProps {
 }
 
 export default function RelatedProducts({ products, title = 'Related Products' }: RelatedProductsProps) {
-  const addItem = useCartStore((state) => state.addItem);
+  const addItem = useStore((state) => state.addToCart);
 
   if (products.length === 0) return null;
 
@@ -18,7 +18,7 @@ export default function RelatedProducts({ products, title = 'Related Products' }
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map((product) => (
           <ProductCard
-            key={product.id}
+            key={product._id}
             product={product}
             onAddToCart={addItem}
           />

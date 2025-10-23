@@ -1,5 +1,3 @@
-
-
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Product } from './api';
@@ -9,89 +7,97 @@ export interface CartItem {
   quantity: number;
 }
 
-interface CartState {
-  items: CartItem[];
-  addItem: (product: Product, quantity?: number) => void;
-  removeItem: (productId: string) => void;
+interface StoreState {
+  // Cart
+  cart: CartItem[];
+  addToCart: (product: Product, quantity?: number) => void;
+  removeFromCart: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
   getItemCount: () => number;
-  getSubtotal: () => number;
+  getTotal: () => number;
+  
+  // Customer
+  customer: any | null;
+  setCustomer: (customer: any) => void;
+  logout: () => void;
 }
 
-export const useCartStore = create<CartState>()(
+export const useStore = create<StoreState>()(
   persist(
     (set, get) => ({
-      items: [],
+      // Initial state
+      cart: [],
+      customer: null,
 
-      
-      addItem: (product, quantity = 1) => {
+      // Cart methods
+      addToCart: (product, quantity = 1) => {
         set((state) => {
-          const existingItem = state.items.find(
-            (item) => item.product.id === product.id
+          const existingItem = state.cart.find(
+            (item) => item.product._id === product._id
           );
 
           if (existingItem) {
-            // Update quantity of existing item
             return {
-              items: state.items.map((item) =>
-                item.product.id === product.id
+              cart: state.cart.map((item) =>
+                item.product._id === product._id
                   ? { ...item, quantity: item.quantity + quantity }
                   : item
               ),
             };
           } else {
-            // Add new item
             return {
-              items: [...state.items, { product, quantity }],
+              cart: [...state.cart, { product, quantity }],
             };
           }
         });
       },
 
-      
-      removeItem: (productId) => {
+      removeFromCart: (productId) => {
         set((state) => ({
-          items: state.items.filter((item) => item.product.id !== productId),
+          cart: state.cart.filter((item) => item.product._id !== productId),
         }));
       },
 
-     
       updateQuantity: (productId, quantity) => {
         if (quantity <= 0) {
-          get().removeItem(productId);
+          get().removeFromCart(productId);
           return;
         }
 
         set((state) => ({
-          items: state.items.map((item) =>
-            item.product.id === productId
-              ? { ...item, quantity }
-              : item
+          cart: state.cart.map((item) =>
+            item.product._id === productId ? { ...item, quantity } : item
           ),
         }));
       },
 
-     
       clearCart: () => {
-        set({ items: [] });
+        set({ cart: [] });
       },
 
-    
       getItemCount: () => {
-        return get().items.reduce((total, item) => total + item.quantity, 0);
+        return get().cart.reduce((total, item) => total + item.quantity, 0);
       },
 
-   
-      getSubtotal: () => {
-        return get().items.reduce(
+      getTotal: () => {
+        return get().cart.reduce(
           (total, item) => total + item.product.price * item.quantity,
           0
         );
       },
+
+      // Customer methods
+      setCustomer: (customer) => {
+        set({ customer });
+      },
+
+      logout: () => {
+        set({ customer: null, cart: [] });
+      },
     }),
     {
-      name: 'shoplite-cart', 
+      name: 'shoplite-store',
       version: 1,
     }
   )

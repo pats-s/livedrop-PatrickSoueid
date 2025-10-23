@@ -13,6 +13,11 @@ import CartPage from '../pages/cart';
 import CheckoutPage from '../pages/checkout';
 import OrderStatusPage from '../pages/order-status';
 import OrdersPage from '../pages/orders';
+import LoginPage from '../pages/login';
+import MyOrdersPage from '../pages/my-orders';
+import AdminPage from '../pages/admin';
+
+
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +48,22 @@ export const router = createBrowserRouter([
         path: 'order/:id',
         element: <OrderStatusPage />,
       },
+      {
+        path: '/login',
+        element: <LoginPage />
+      },
+      {
+        path: '/orders/:orderId',
+        element: <OrderStatusPage />
+      },
+      {
+        path: '/my-orders',
+        element: <MyOrdersPage />
+      },
+      {
+        path: '/admin',
+        element: <AdminPage />
+      }
     ],
   },
 ]);

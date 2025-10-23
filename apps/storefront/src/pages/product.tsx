@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button, Badge, Spinner } from '../components/atoms';
 import { RelatedProducts } from '../components/organisms';
-import { getProduct, getRelatedProducts } from '../lib/api';
-import { useCartStore } from '../lib/store';
-import { formatCurrency, getStockStatus, getStockStatusColor } from '../lib/format';
+import { getProductById, getProducts } from '../lib/api';
+import { useStore } from '../lib/store';
+import { formatCurrency } from '../lib/format';
 import type { Product } from '../lib/api';
 
 export default function ProductPage() {
@@ -14,7 +14,7 @@ export default function ProductPage() {
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
-  const addItem = useCartStore((state) => state.addItem);
+  const addToCart = useStore((state) => state.addToCart);
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -22,18 +22,15 @@ export default function ProductPage() {
       
       setIsLoading(true);
       try {
-        const [productData, related] = await Promise.all([
-          getProduct(id),
-          getRelatedProducts(id, 3),
-        ]);
-        
-        if (!productData) {
-          navigate('/');
-          return;
-        }
-        
+        const productData = await getProductById(id);
         setProduct(productData);
-        setRelatedProducts(related);
+        
+        // Get related products (same category)
+        const relatedResponse = await getProducts({
+          category: productData.category,
+          limit: 4
+        });
+        setRelatedProducts(relatedResponse.products.filter((p: Product) => p._id !== id));
       } catch (error) {
         console.error('Failed to load product:', error);
         navigate('/');
@@ -47,7 +44,7 @@ export default function ProductPage() {
 
   const handleAddToCart = () => {
     if (product) {
-      addItem(product, quantity);
+      addToCart(product, quantity);
     }
   };
 
@@ -63,13 +60,12 @@ export default function ProductPage() {
     return null;
   }
 
-  const isOutOfStock = product.stockQty === 0;
-  const maxQuantity = Math.min(product.stockQty, 10);
+  const isOutOfStock = product.stock === 0;
+  const maxQuantity = Math.min(product.stock, 10);
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Back button */}
         <button
           onClick={() => navigate('/')}
           className="text-blue-600 hover:text-blue-700 mb-6 flex items-center gap-2"
@@ -80,36 +76,32 @@ export default function ProductPage() {
           Back to Catalog
         </button>
 
-        {/* Product Details */}
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Image */}
             <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
               <img
-                src={product.image}
-                alt={product.title}
+                src={product.imageUrl}
+                alt={product.name}
                 className="w-full h-full object-cover"
               />
             </div>
 
-            {/* Info */}
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.title}</h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
 
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl font-bold text-gray-900">
                   {formatCurrency(product.price)}
                 </span>
                 <Badge
-                  variant={product.stockQty === 0 ? 'danger' : product.stockQty < 5 ? 'warning' : 'success'}
+                  variant={product.stock === 0 ? 'danger' : product.stock < 5 ? 'warning' : 'success'}
                 >
-                  {getStockStatus(product.stockQty)}
+                  {product.stock === 0 ? 'Out of Stock' : product.stock < 5 ? 'Low Stock' : 'In Stock'}
                 </Badge>
               </div>
 
               <p className="text-gray-600 mb-6">{product.description}</p>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {product.tags.map((tag) => (
                   <Badge key={tag} variant="default">
@@ -118,7 +110,6 @@ export default function ProductPage() {
                 ))}
               </div>
 
-              {/* Quantity Selector */}
               {!isOutOfStock && (
                 <div className="mb-6">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -138,7 +129,6 @@ export default function ProductPage() {
                 </div>
               )}
 
-              {/* Add to Cart */}
               <Button
                 variant="primary"
                 size="lg"
@@ -152,7 +142,6 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* Related Products */}
         <RelatedProducts products={relatedProducts} />
       </div>
     </div>

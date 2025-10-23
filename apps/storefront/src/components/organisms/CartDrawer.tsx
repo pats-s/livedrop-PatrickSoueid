@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../atoms';
 import { CartItem, OrderSummary } from '../molecules';
-import { useCartStore } from '../../lib/store';
+import { useStore } from '../../lib/store';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -9,10 +9,10 @@ interface CartDrawerProps {
 }
 
 export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
-  const items = useCartStore((state) => state.items);
-  const updateQuantity = useCartStore((state) => state.updateQuantity);
-  const removeItem = useCartStore((state) => state.removeItem);
-  const subtotal = useCartStore((state) => state.getSubtotal());
+  const items = useStore((state) => state.cart);
+  const updateQuantity = useStore((state) => state.updateQuantity);
+  const removeItem = useStore((state) => state.removeFromCart);
+  const subtotal = useStore((state) => state.getTotal());
 
   if (!isOpen) return null;
 
@@ -52,7 +52,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <div className="space-y-4">
               {items.map((item) => (
                 <CartItem
-                  key={item.product.id}
+                  key={item.product._id}
                   item={item}
                   onUpdateQuantity={updateQuantity}
                   onRemove={removeItem}

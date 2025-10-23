@@ -1,5 +1,5 @@
 import { ProductCard } from '../molecules';
-import { useCartStore } from '../../lib/store';
+import { useStore } from '../../lib/store';
 import type { Product } from '../../lib/api';
 
 interface ProductGridProps {
@@ -7,7 +7,7 @@ interface ProductGridProps {
 }
 
 export default function ProductGrid({ products }: ProductGridProps) {
-  const addItem = useCartStore((state) => state.addItem);
+  const addItem = useStore((state) => state.addToCart);
 
   if (products.length === 0) {
     return (
@@ -21,7 +21,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products.map((product) => (
         <ProductCard
-          key={product.id}
+          key={product._id}
           product={product}
           onAddToCart={addItem}
         />

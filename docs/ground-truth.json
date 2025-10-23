@@ -1,0 +1,107 @@
+[
+  {
+    "id": "Return3.1",
+    "question": "What is your return policy?",
+    "answer": "Items can be returned within 30 days of purchase with the original receipt. All items must be in their original condition with tags attached and original packaging intact. Refunds are processed within 5-7 business days after we receive and inspect the returned item. Final sale items and personalized products cannot be returned.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Return3.2",
+    "question": "How do I start a return?",
+    "answer": "To initiate a return, log into your account and go to Order History. Select the order containing the item you wish to return and click 'Request Return'. You'll receive a return authorization number and prepaid shipping label via email within 24 hours. Package the item securely and drop it off at any authorized shipping location.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Return3.3",
+    "question": "What items cannot be returned?",
+    "answer": "The following items are non-returnable: opened beauty products, intimate apparel, perishable goods, personalized or custom-made items, gift cards, and items marked as 'Final Sale'. Health and safety regulations also prevent returns of certain hygiene products once opened.",
+    "category": "returns",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Shipping2.1",
+    "question": "What are your shipping options and costs?",
+    "answer": "We offer three shipping options: Standard Shipping (5-7 business days, $5.99), Express Shipping (2-3 business days, $12.99), and Overnight Shipping (next business day, $24.99). Free standard shipping is available on all orders over $50. Shipping costs are calculated at checkout based on your delivery address and selected shipping method.",
+    "category": "shipping",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Shipping2.2",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to over 50 countries worldwide. International shipping costs vary by destination and are calculated at checkout. Delivery times range from 7-21 business days depending on the destination country. Please note that customers are responsible for any customs duties, taxes, or import fees charged by their country.",
+    "category": "shipping",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Shipping2.3",
+    "question": "How can I track my order?",
+    "answer": "Once your order ships, you'll receive a shipping confirmation email with a tracking number. You can track your package by clicking the tracking link in the email or by logging into your account and viewing your order history. Tracking information is typically available within 24 hours of shipment. For real-time updates, you can also contact our support team with your order number.",
+    "category": "shipping",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Warranty4.1",
+    "question": "What is covered under your product warranty?",
+    "answer": "All electronics and appliances come with a standard 1-year manufacturer's warranty covering defects in materials and workmanship. The warranty does not cover damage from misuse, accidents, unauthorized repairs, or normal wear and tear. To make a warranty claim, contact our support team with your order number and a description of the issue. Extended warranty options are available for purchase at checkout.",
+    "category": "warranty",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Warranty4.2",
+    "question": "How do I file a warranty claim?",
+    "answer": "To file a warranty claim, contact our customer support team with your order number, product details, and description of the defect. Include photos or videos if possible. Our team will review your claim within 2-3 business days. If approved, you'll receive instructions for either a replacement, repair, or refund depending on the product and issue. Keep all original packaging as you may need to ship the item back for inspection.",
+    "category": "warranty",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Payment5.1",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept all major credit cards (Visa, Mastercard, American Express, Discover), debit cards, PayPal, Apple Pay, Google Pay, and Shop Pay. We also offer buy-now-pay-later options through Klarna and Afterpay for qualifying purchases. All transactions are secured with 256-bit SSL encryption to protect your payment information.",
+    "category": "payment",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Payment5.2",
+    "question": "Is my payment information secure?",
+    "answer": "Yes, we take payment security very seriously. All payment information is encrypted using industry-standard 256-bit SSL encryption. We are PCI DSS compliant and never store your full credit card details on our servers. Payment processing is handled by trusted third-party providers that meet the highest security standards. We also offer two-factor authentication for added account security.",
+    "category": "payment",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Account6.1",
+    "question": "How do I create an account?",
+    "answer": "To create an account, click the 'Sign Up' button in the top right corner of our website. Enter your email address, create a secure password, and provide your name and shipping address. You'll receive a verification email - click the link to activate your account. Creating an account allows you to track orders, save payment methods, manage addresses, and receive exclusive member discounts.",
+    "category": "account",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Account6.2",
+    "question": "I forgot my password. How do I reset it?",
+    "answer": "Click 'Forgot Password' on the login page and enter your email address. We'll send you a password reset link within a few minutes. Click the link and follow the instructions to create a new password. For security, the reset link expires after 1 hour. If you don't receive the email, check your spam folder or contact support for assistance.",
+    "category": "account",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Privacy7.1",
+    "question": "How do you protect my personal information?",
+    "answer": "We are committed to protecting your privacy. Your personal information is encrypted and stored securely on protected servers. We never sell your data to third parties. We only share information with service providers necessary to fulfill orders (shipping companies, payment processors). You can review our full Privacy Policy for details on data collection, usage, and your rights. You have the right to access, correct, or delete your personal data at any time.",
+    "category": "privacy",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Promo8.1",
+    "question": "How do I use a promotional code?",
+    "answer": "Enter your promotional code in the 'Promo Code' or 'Discount Code' field at checkout before completing your purchase. Click 'Apply' to see the discount reflected in your order total. Only one promotional code can be used per order. Promo codes cannot be combined with other offers unless specifically stated. Some exclusions may apply - check the terms and conditions of each promotion.",
+    "category": "promotions",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  },
+  {
+    "id": "Contact9.1",
+    "question": "How can I contact customer support?",
+    "answer": "You can reach our customer support team in several ways: Live Chat (available 24/7 on our website), Email (support@shoplite.com - we respond within 24 hours), Phone (1-800-SHOPLITE, Monday-Friday 8 AM - 8 PM EST), or through our Contact Form on the website. For the fastest response, use live chat. Our support team is here to help with orders, returns, product questions, and any other concerns.",
+    "category": "support",
+    "lastUpdated": "2025-10-01T00:00:00Z"
+  }
+]

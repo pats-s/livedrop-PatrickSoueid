@@ -2,14 +2,14 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../components/atoms';
 import { CartItem, OrderSummary } from '../components/molecules';
-import { useCartStore } from '../lib/store';
+import { useStore } from '../lib/store';
 
 export default function CartPage() {
   const navigate = useNavigate();
-  const items = useCartStore((state) => state.items);
-  const updateQuantity = useCartStore((state) => state.updateQuantity);
-  const removeItem = useCartStore((state) => state.removeItem);
-  const subtotal = useCartStore((state) => state.getSubtotal());
+  const items = useStore((state) => state.cart);
+  const updateQuantity = useStore((state) => state.updateQuantity);
+  const removeItem = useStore((state) => state.removeFromCart);
+  const subtotal = useStore((state) => state.getTotal());
 
 
   if (items.length === 0) {
@@ -39,7 +39,7 @@ export default function CartPage() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               {items.map((item) => (
                 <CartItem
-                  key={item.product.id}
+                  key={item.product._id}
                   item={item}
                   onUpdateQuantity={updateQuantity}
                   onRemove={removeItem}

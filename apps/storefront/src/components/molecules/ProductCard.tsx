@@ -9,16 +9,16 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onAddToCart }: ProductCardProps) {
-  const isOutOfStock = product.stockQty === 0;
-  const isLowStock = product.stockQty > 0 && product.stockQty < 5;
+  const isOutOfStock = product.stock === 0;
+  const isLowStock = product.stock > 0 && product.stock < 5;
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
-      <Link to={`/p/${product.id}`}>
+      <Link to={`/p/${product._id}`}>
         <div className="aspect-square bg-gray-100">
           <img
-            src={product.image}
-            alt={product.title}
+            src={product.imageUrl}
+            alt={product.name}
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -26,9 +26,9 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
       </Link>
       
       <div className="p-4">
-        <Link to={`/p/${product.id}`}>
+        <Link to={`/p/${product._id}`}>
           <h3 className="font-medium text-gray-900 mb-1 hover:text-blue-600 line-clamp-2">
-            {product.title}
+            {product.name}
           </h3>
         </Link>
         
@@ -38,7 +38,7 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
           </span>
           {isLowStock && (
             <Badge variant="warning" size="sm">
-              {getStockStatus(product.stockQty)}
+              {getStockStatus(product.stock)}
             </Badge>
           )}
           {isOutOfStock && (
