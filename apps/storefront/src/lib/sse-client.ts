@@ -12,12 +12,12 @@ export function connectToOrderStream(
     onUpdate(data);
   });
 
-  eventSource.addEventListener('complete', (event) => {
+  eventSource.addEventListener('complete', (_event) => {
     onComplete();
     eventSource.close();
   });
 
-  eventSource.addEventListener('error', (event) => {
+  eventSource.addEventListener('error', (_event) => {
     onError(new Error('Connection error'));
   });
 

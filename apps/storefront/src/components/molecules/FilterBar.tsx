@@ -1,4 +1,3 @@
-import { Badge } from '../atoms';
 
 interface FilterBarProps {
   tags: string[];
